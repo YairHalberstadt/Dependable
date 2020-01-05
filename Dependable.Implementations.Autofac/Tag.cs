@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Dependable.Abstractions
+namespace Dependable.Implementations.Autofac
 {
 	public abstract class Tag : IEquatable<Tag>
 	{
