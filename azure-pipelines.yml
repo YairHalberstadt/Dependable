@@ -16,7 +16,7 @@ steps:
 - task: DotNetCoreInstaller@0
   displayName: 'Install .net core 2.1'
   inputs:
-    version: '2.1.x'
+    version: '2.1.14'
 
 - script: dotnet build source/Dependable.sln --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
