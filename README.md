@@ -2,6 +2,8 @@
 
 Dependency Injection used correctly
 
+[![Build Status](https://dev.azure.com/yairhalberstadt/Dependable/_apis/build/status/YairHalberstadt.Dependable?branchName=master)](https://dev.azure.com/yairhalberstadt/Dependable/_build/latest?definitionId=4&branchName=master)
+
 ## Aim
 
 One of the most important principles of IOC Containers is that they shouldn't affect the code at all. Their usage should be entirely outside the scope of your project.
