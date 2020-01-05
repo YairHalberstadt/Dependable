@@ -2,6 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Yair Halberstadt</Authors>
+    <Company>Yair Halberstadt</Company>
+    <Product>Dependable</Product>
+    <Description>Implementation of Dependable.Abstractions for Autofac.</Description>
+    <Copyright />
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/YairHalberstadt/Dependable</RepositoryUrl>
+    <Version>1.0.0-alpha</Version>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <IncludeSource>true</IncludeSource>
   </PropertyGroup>
 
   <ItemGroup>
