@@ -589,7 +589,5 @@ namespace Dependable.Implementations.Autofac.Tests
 		private class Requires6 { public Requires6(Type1 p1, Type2 p2, Type3 p3, Type4 p4, Type5 p5, Type6 p6) { } }
 		private class Requires7 { public Requires7(Type1 p1, Type2 p2, Type3 p3, Type4 p4, Type5 p5, Type6 p6, Type7 p7) { } }
 		private class Requires8 { public Requires8(Type1 p1, Type2 p2, Type3 p3, Type4 p4, Type5 p5, Type6 p6, Type7 p7, Type8 p8) { } }
-
-
 	}
 }

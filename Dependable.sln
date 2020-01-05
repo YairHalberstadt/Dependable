@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dependable.Implementations.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dependable.Implementations.Autofac.Tests", "Dependable.Implementations.Autofac.Tests\Dependable.Implementations.Autofac.Tests.csproj", "{FD1AE8E8-7F79-415D-BFC0-9BEF6A1C7E02}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dependable.Implementations.Manual", "Dependable.Implementations.Manual\Dependable.Implementations.Manual.csproj", "{08294566-4339-4E68-A93C-0FD6290C90A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{FD1AE8E8-7F79-415D-BFC0-9BEF6A1C7E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD1AE8E8-7F79-415D-BFC0-9BEF6A1C7E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD1AE8E8-7F79-415D-BFC0-9BEF6A1C7E02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08294566-4339-4E68-A93C-0FD6290C90A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08294566-4339-4E68-A93C-0FD6290C90A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08294566-4339-4E68-A93C-0FD6290C90A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08294566-4339-4E68-A93C-0FD6290C90A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
