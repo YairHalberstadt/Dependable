@@ -30,6 +30,6 @@ Dependable aims to provide suitable abstractions for doing this, as well as impl
 
 ## Documentation
 
-- [Abstractions](documentation/abstractions.md)
-- [Autofac Implementation](documentation/autofac.md)
-- [Manual Implementation](documentation/manual.md)
+- [Abstractions](Documentation/abstractions.md)
+- [Autofac Implementation](Documentation/autofac.md)
+- [Manual Implementation](Documentation/manual.md)
