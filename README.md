@@ -6,9 +6,9 @@ Dependency Injection used correctly
 
 ## Packages
 
-https://www.nuget.org/packages/Dependable.Abstractions/1.0.0-CI-20200105-194825
-https://www.nuget.org/packages/Dependable.Implementations.Manual/1.0.0-CI-20200105-194825
-https://www.nuget.org/packages/Dependable.Implementations.Autofac/1.0.0-CI-20200105-194825
+https://www.nuget.org/packages/Dependable.Abstractions
+https://www.nuget.org/packages/Dependable.Implementations.Manual
+https://www.nuget.org/packages/Dependable.Implementations.Autofac
 
 ```pm
 Install-Package Dependable.Abstractions -Version 1.0.0-CI-20200105-194825
