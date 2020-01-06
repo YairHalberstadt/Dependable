@@ -116,6 +116,18 @@ namespace Dependable.Implementations.Autofac.Tests
 			}
 		}
 
+		[Fact]
+		public void CreateScopeParametersOverrideExistingRegistration()
+		{
+			var builder = GetBuilder();
+			builder.RegisterInstance("Hello");
+			using (var container = builder.Build())
+			{
+				var c = container.Resolve<C<string>>();
+				Assert.Equal("World", c.LifetimeScope.CreateScope("World").Value);
+			}
+		}
+
 		private ContainerBuilder GetBuilder()
 		{
 			var builder = new ContainerBuilder();
