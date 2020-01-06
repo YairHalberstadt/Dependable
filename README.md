@@ -2,6 +2,20 @@
 
 Dependency Injection used correctly
 
+[![Build Status](https://dev.azure.com/yairhalberstadt/Dependable/_apis/build/status/YairHalberstadt.Dependable?branchName=master)](https://dev.azure.com/yairhalberstadt/Dependable/_build/latest?definitionId=4&branchName=master)
+
+## Packages
+
+https://www.nuget.org/packages/Dependable.Abstractions
+https://www.nuget.org/packages/Dependable.Implementations.Manual
+https://www.nuget.org/packages/Dependable.Implementations.Autofac
+
+```pm
+Install-Package Dependable.Abstractions -Version 1.0.0-CI-20200105-194825
+Install-Package Dependable.Implementations.Manual -Version 1.0.0-CI-20200105-194825
+Install-Package Dependable.Implementations.Autofac -Version 1.0.0-CI-20200105-194825
+```
+
 ## Aim
 
 One of the most important principles of IOC Containers is that they shouldn't affect the code at all. Their usage should be entirely outside the scope of your project.
@@ -16,9 +30,9 @@ Dependable aims to provide suitable abstractions for doing this, as well as impl
 
 ## Documentation
 
-- [Abstractions](documentation/abstractions.md)
-- [Autofac Implementation](documentation/autofac.md)
-- [Manual Implementation](documentation/manual.md)
+- [Abstractions](Documentation/abstractions.md)
+- [Autofac Implementation](Documentation/autofac.md)
+- [Manual Implementation](Documentation/manual.md)
 
 ## Example Use Case
 
