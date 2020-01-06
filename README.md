@@ -170,3 +170,21 @@ public class Server
 ```
 
 Simple! (and you can of course do exactly the same with the original, pure Autofac example).
+
+### Tags
+
+By default we create a new instance of our logger for every single dependency. We might want to only have a single instance for each `LoggerState`.
+
+Registering the logger as `InstancePerLifetimeScope()` has almost the correct behaviour. It only creates a new logger when we create a new scope. Howerver it doesn't have quite the semantics we want. We don't need a new logger for every single scope. We only need one when a new `ILoggerState` is available.
+
+The `Dependable.Implementations.Autofac.Tag` type allow us to do this. We register the logger as follows:
+
+```csharp
+builder.RegisterType<Logger>().AsInstancePerMatchingLifetimeScope(Tag.CreateTag<ILoggerState>());
+```
+
+Now a new `Logger` will be created only when a scope is created by an instance of `IScopeFactory` that accepts `ILoggerState` as a parameter.
+
+So `IScopeFactory<string, IRequestHandler>` will not create a new `Logger`, whilst `IScopeFactory<ILoggerState, IRequestHandler>` will.
+
+Your logger might depend on multiple dependencies, and therefore you might want to create a new `Logger` when a new instance of any of them are provided. This can be done by adding more generic parameters to `CreateTag`. For example `Tag.CreateTag<ILoggerState, TextWriter>()`.
