@@ -180,11 +180,11 @@ Registering the logger as `InstancePerLifetimeScope()` has almost the correct be
 The `Dependable.Implementations.Autofac.Tag` type allow us to do this. We register the logger as follows:
 
 ```csharp
-builder.RegisterType<Logger>().AsInstancePerMatchingLifetimeScope(Tag.CreateTag<ILoggerState>());
+builder.RegisterType<Logger>().AsInstancePerMatchingLifetimeScope(Tag.Create<ILoggerState>());
 ```
 
 Now a new `Logger` will be created only when a scope is created by an instance of `IScopeFactory` that accepts `ILoggerState` as a parameter.
 
 So `IScopeFactory<string, IRequestHandler>` will not create a new `Logger`, whilst `IScopeFactory<ILoggerState, IRequestHandler>` will.
 
-Your logger might depend on multiple dependencies, and therefore you might want to create a new `Logger` when a new instance of any of them are provided. This can be done by adding more generic parameters to `CreateTag`. For example `Tag.CreateTag<ILoggerState, TextWriter>()`.
+Your logger might depend on multiple dependencies, and therefore you might want to create a new `Logger` when a new instance of any of them are provided. This can be done by adding more generic parameters to `Create`. For example `Tag.Create<ILoggerState, TextWriter>()`.

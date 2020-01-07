@@ -167,42 +167,42 @@ namespace Dependable.Implementations.Autofac
 
 		private static ILifetimeScope CreateChildScopeWith<T>(ILifetimeScope lifetimeScope, T value)
 		{
-			return lifetimeScope.BeginLifetimeScope(Tag.GetTag<T>(), c => c.Register(_ => value));
+			return lifetimeScope.BeginLifetimeScope(Tag.Create<T>(), c => c.Register(_ => value));
 		}
 
 		private static ILifetimeScope CreateChildScopeWith<T1, T2>(ILifetimeScope lifetimeScope, T1 value1, T2 value2)
 		{
-			return lifetimeScope.BeginLifetimeScope(Tag.GetTag<T1, T2>(), c => { c.Register(_ => value1); c.Register(_ => value2); });
+			return lifetimeScope.BeginLifetimeScope(Tag.Create<T1, T2>(), c => { c.Register(_ => value1); c.Register(_ => value2); });
 		}
 
 		private static ILifetimeScope CreateChildScopeWith<T1, T2, T3>(ILifetimeScope lifetimeScope, T1 value1, T2 value2, T3 value3)
 		{
-			return lifetimeScope.BeginLifetimeScope(Tag.GetTag<T1, T2, T3>(), c => { c.Register(_ => value1); c.Register(_ => value2); c.Register(_ => value3); });
+			return lifetimeScope.BeginLifetimeScope(Tag.Create<T1, T2, T3>(), c => { c.Register(_ => value1); c.Register(_ => value2); c.Register(_ => value3); });
 		}
 
 		private static ILifetimeScope CreateChildScopeWith<T1, T2, T3, T4>(ILifetimeScope lifetimeScope, T1 value1, T2 value2, T3 value3, T4 value4)
 		{
-			return lifetimeScope.BeginLifetimeScope(Tag.GetTag<T1, T2, T3, T4>(), c => { c.Register(_ => value1); c.Register(_ => value2); c.Register(_ => value3); c.Register(_ => value4); });
+			return lifetimeScope.BeginLifetimeScope(Tag.Create<T1, T2, T3, T4>(), c => { c.Register(_ => value1); c.Register(_ => value2); c.Register(_ => value3); c.Register(_ => value4); });
 		}
 
 		private static ILifetimeScope CreateChildScopeWith<T1, T2, T3, T4, T5>(ILifetimeScope lifetimeScope, T1 value1, T2 value2, T3 value3, T4 value4, T5 value5)
 		{
-			return lifetimeScope.BeginLifetimeScope(Tag.GetTag<T1, T2, T3, T4, T5>(), c => { c.Register(_ => value1); c.Register(_ => value2); c.Register(_ => value3); c.Register(_ => value4); c.Register(_ => value5); });
+			return lifetimeScope.BeginLifetimeScope(Tag.Create<T1, T2, T3, T4, T5>(), c => { c.Register(_ => value1); c.Register(_ => value2); c.Register(_ => value3); c.Register(_ => value4); c.Register(_ => value5); });
 		}
 
 		private static ILifetimeScope CreateChildScopeWith<T1, T2, T3, T4, T5, T6>(ILifetimeScope lifetimeScope, T1 value1, T2 value2, T3 value3, T4 value4, T5 value5, T6 value6)
 		{
-			return lifetimeScope.BeginLifetimeScope(Tag.GetTag<T1, T2, T3, T4, T5, T6>(), c => { c.Register(_ => value1); c.Register(_ => value2); c.Register(_ => value3); c.Register(_ => value4); c.Register(_ => value5); c.Register(_ => value6); });
+			return lifetimeScope.BeginLifetimeScope(Tag.Create<T1, T2, T3, T4, T5, T6>(), c => { c.Register(_ => value1); c.Register(_ => value2); c.Register(_ => value3); c.Register(_ => value4); c.Register(_ => value5); c.Register(_ => value6); });
 		}
 
 		private static ILifetimeScope CreateChildScopeWith<T1, T2, T3, T4, T5, T6, T7>(ILifetimeScope lifetimeScope, T1 value1, T2 value2, T3 value3, T4 value4, T5 value5, T6 value6, T7 value7)
 		{
-			return lifetimeScope.BeginLifetimeScope(Tag.GetTag<T1, T2, T3, T4, T5, T6, T7>(), c => { c.Register(_ => value1); c.Register(_ => value2); c.Register(_ => value3); c.Register(_ => value4); c.Register(_ => value5); c.Register(_ => value6); c.Register(_ => value7); });
+			return lifetimeScope.BeginLifetimeScope(Tag.Create<T1, T2, T3, T4, T5, T6, T7>(), c => { c.Register(_ => value1); c.Register(_ => value2); c.Register(_ => value3); c.Register(_ => value4); c.Register(_ => value5); c.Register(_ => value6); c.Register(_ => value7); });
 		}
 
 		private static ILifetimeScope CreateChildScopeWith<T1, T2, T3, T4, T5, T6, T7, T8>(ILifetimeScope lifetimeScope, T1 value1, T2 value2, T3 value3, T4 value4, T5 value5, T6 value6, T7 value7, T8 value8)
 		{
-			return lifetimeScope.BeginLifetimeScope(Tag.GetTag<T1, T2, T3, T4, T5, T6, T7, T8>(), c => { c.Register(_ => value1); c.Register(_ => value2); c.Register(_ => value3); c.Register(_ => value4); c.Register(_ => value5); c.Register(_ => value6); c.Register(_ => value7); c.Register(_ => value8); });
+			return lifetimeScope.BeginLifetimeScope(Tag.Create<T1, T2, T3, T4, T5, T6, T7, T8>(), c => { c.Register(_ => value1); c.Register(_ => value2); c.Register(_ => value3); c.Register(_ => value4); c.Register(_ => value5); c.Register(_ => value6); c.Register(_ => value7); c.Register(_ => value8); });
 		}
 
 		private static IScope<T> Scope<T>(ILifetimeScope lifetimeScope)

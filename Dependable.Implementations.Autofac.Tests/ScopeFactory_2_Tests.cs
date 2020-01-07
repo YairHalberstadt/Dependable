@@ -79,7 +79,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void UsesDifferentInstanceForDifferentScopeIfMatchingLifetimeScopeUsedWithTagOfParam()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<D>().InstancePerMatchingLifetimeScope(Tag.GetTag<string>());
+			builder.RegisterType<D>().InstancePerMatchingLifetimeScope(Tag.Create<string>());
 			using (var container = builder.Build())
 			{
 				var c = container.Resolve<C<Func<D>>>();
@@ -95,7 +95,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void ThrowsIfMatchingLifetimeScopeUsedWithTagOfDifferentParam()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<D>().InstancePerMatchingLifetimeScope(Tag.GetTag<object>());
+			builder.RegisterType<D>().InstancePerMatchingLifetimeScope(Tag.Create<object>());
 			using (var container = builder.Build())
 			{
 				var c = container.Resolve<C<D>>();

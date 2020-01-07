@@ -45,7 +45,7 @@ Assert.NotNull(scopeFactory.CreateScope("some string"));
 
 #### Tags and InstancePerMatchingLifetimeScope
 
-You can register a type as `InstancePerMatchingLifetimeScope` with a tag created using `Dependable.Implementations.Autofac.Tag`. You can pass up to 8 type parameters to Tag.CreateTag.
+You can register a type as `InstancePerMatchingLifetimeScope` with a tag created using `Dependable.Implementations.Autofac.Tag`. You can pass up to 8 type parameters to `Tag.Create`.
 
 An instance of `IScopeFactory` that has a `TParam` of the same type as any of the type parameters as the `Tag` will create a new instance of the type.
 
@@ -54,7 +54,7 @@ This way you can control when a scope will create a new instance of an object. Y
 For example:
 
 ```csharp
-builder.RegisterType<Client>.AsInstancePerMatchingLifetimeScope(Tag.CreateTag<Uri>());
+builder.RegisterType<Client>.AsInstancePerMatchingLifetimeScope(Tag.Create<Uri>());
 ...
 
 class C

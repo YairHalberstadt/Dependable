@@ -25,7 +25,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test1()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires1>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type1>());
+			builder.RegisterType<Requires1>().InstancePerMatchingLifetimeScope(Tag.Create<Type1>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Requires1>>();
@@ -40,7 +40,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test2_1()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires2>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type1>());
+			builder.RegisterType<Requires2>().InstancePerMatchingLifetimeScope(Tag.Create<Type1>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Requires2>>();
@@ -55,7 +55,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test2_2()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires2>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type2>());
+			builder.RegisterType<Requires2>().InstancePerMatchingLifetimeScope(Tag.Create<Type2>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Requires2>>();
@@ -70,7 +70,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test3_1()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires3>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type1>());
+			builder.RegisterType<Requires3>().InstancePerMatchingLifetimeScope(Tag.Create<Type1>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Requires3>>();
@@ -85,7 +85,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test3_2()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires3>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type2>());
+			builder.RegisterType<Requires3>().InstancePerMatchingLifetimeScope(Tag.Create<Type2>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Requires3>>();
@@ -100,7 +100,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test3_3()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires3>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type3>());
+			builder.RegisterType<Requires3>().InstancePerMatchingLifetimeScope(Tag.Create<Type3>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Requires3>>();
@@ -115,7 +115,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test4_1()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires4>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type1>());
+			builder.RegisterType<Requires4>().InstancePerMatchingLifetimeScope(Tag.Create<Type1>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Type4, Requires4>>();
@@ -130,7 +130,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test4_2()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires4>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type2>());
+			builder.RegisterType<Requires4>().InstancePerMatchingLifetimeScope(Tag.Create<Type2>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Type4, Requires4>>();
@@ -145,7 +145,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test4_3()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires4>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type3>());
+			builder.RegisterType<Requires4>().InstancePerMatchingLifetimeScope(Tag.Create<Type3>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Type4, Requires4>>();
@@ -160,7 +160,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test4_4()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires4>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type4>());
+			builder.RegisterType<Requires4>().InstancePerMatchingLifetimeScope(Tag.Create<Type4>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Type4, Requires4>>();
@@ -175,7 +175,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test5_1()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires5>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type1>());
+			builder.RegisterType<Requires5>().InstancePerMatchingLifetimeScope(Tag.Create<Type1>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Type4, Type5, Requires5>>();
@@ -190,7 +190,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test5_2()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires5>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type2>());
+			builder.RegisterType<Requires5>().InstancePerMatchingLifetimeScope(Tag.Create<Type2>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Type4, Type5, Requires5>>();
@@ -205,7 +205,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test5_3()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires5>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type3>());
+			builder.RegisterType<Requires5>().InstancePerMatchingLifetimeScope(Tag.Create<Type3>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Type4, Type5, Requires5>>();
@@ -220,7 +220,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test5_4()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires5>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type4>());
+			builder.RegisterType<Requires5>().InstancePerMatchingLifetimeScope(Tag.Create<Type4>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Type4, Type5, Requires5>>();
@@ -235,7 +235,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test5_5()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires5>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type5>());
+			builder.RegisterType<Requires5>().InstancePerMatchingLifetimeScope(Tag.Create<Type5>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Type4, Type5, Requires5>>();
@@ -250,7 +250,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test6_1()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires6>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type1>());
+			builder.RegisterType<Requires6>().InstancePerMatchingLifetimeScope(Tag.Create<Type1>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Type4, Type5, Type6, Requires6>>();
@@ -265,7 +265,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test6_2()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires6>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type2>());
+			builder.RegisterType<Requires6>().InstancePerMatchingLifetimeScope(Tag.Create<Type2>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Type4, Type5, Type6, Requires6>>();
@@ -280,7 +280,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test6_3()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires6>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type3>());
+			builder.RegisterType<Requires6>().InstancePerMatchingLifetimeScope(Tag.Create<Type3>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Type4, Type5, Type6, Requires6>>();
@@ -295,7 +295,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test6_4()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires6>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type4>());
+			builder.RegisterType<Requires6>().InstancePerMatchingLifetimeScope(Tag.Create<Type4>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Type4, Type5, Type6, Requires6>>();
@@ -310,7 +310,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test6_5()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires6>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type5>());
+			builder.RegisterType<Requires6>().InstancePerMatchingLifetimeScope(Tag.Create<Type5>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Type4, Type5, Type6, Requires6>>();
@@ -325,7 +325,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test6_6()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires6>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type6>());
+			builder.RegisterType<Requires6>().InstancePerMatchingLifetimeScope(Tag.Create<Type6>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Type4, Type5, Type6, Requires6>>();
@@ -340,7 +340,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test7_1()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires7>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type1>());
+			builder.RegisterType<Requires7>().InstancePerMatchingLifetimeScope(Tag.Create<Type1>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Type4, Type5, Type6, Type7, Requires7>>();
@@ -355,7 +355,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test7_2()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires7>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type2>());
+			builder.RegisterType<Requires7>().InstancePerMatchingLifetimeScope(Tag.Create<Type2>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Type4, Type5, Type6, Type7, Requires7>>();
@@ -370,7 +370,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test7_3()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires7>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type3>());
+			builder.RegisterType<Requires7>().InstancePerMatchingLifetimeScope(Tag.Create<Type3>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Type4, Type5, Type6, Type7, Requires7>>();
@@ -385,7 +385,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test7_4()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires7>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type4>());
+			builder.RegisterType<Requires7>().InstancePerMatchingLifetimeScope(Tag.Create<Type4>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Type4, Type5, Type6, Type7, Requires7>>();
@@ -400,7 +400,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test7_5()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires7>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type5>());
+			builder.RegisterType<Requires7>().InstancePerMatchingLifetimeScope(Tag.Create<Type5>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Type4, Type5, Type6, Type7, Requires7>>();
@@ -415,7 +415,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test7_6()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires7>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type6>());
+			builder.RegisterType<Requires7>().InstancePerMatchingLifetimeScope(Tag.Create<Type6>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Type4, Type5, Type6, Type7, Requires7>>();
@@ -430,7 +430,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test7_7()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires7>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type7>());
+			builder.RegisterType<Requires7>().InstancePerMatchingLifetimeScope(Tag.Create<Type7>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Type4, Type5, Type6, Type7, Requires7>>();
@@ -445,7 +445,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test8_1()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires8>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type1>());
+			builder.RegisterType<Requires8>().InstancePerMatchingLifetimeScope(Tag.Create<Type1>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Type4, Type5, Type6, Type7, Type8, Requires8>>();
@@ -460,7 +460,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test8_2()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires8>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type2>());
+			builder.RegisterType<Requires8>().InstancePerMatchingLifetimeScope(Tag.Create<Type2>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Type4, Type5, Type6, Type7, Type8, Requires8>>();
@@ -475,7 +475,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test8_3()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires8>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type3>());
+			builder.RegisterType<Requires8>().InstancePerMatchingLifetimeScope(Tag.Create<Type3>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Type4, Type5, Type6, Type7, Type8, Requires8>>();
@@ -490,7 +490,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test8_4()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires8>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type4>());
+			builder.RegisterType<Requires8>().InstancePerMatchingLifetimeScope(Tag.Create<Type4>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Type4, Type5, Type6, Type7, Type8, Requires8>>();
@@ -505,7 +505,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test8_5()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires8>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type5>());
+			builder.RegisterType<Requires8>().InstancePerMatchingLifetimeScope(Tag.Create<Type5>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Type4, Type5, Type6, Type7, Type8, Requires8>>();
@@ -521,7 +521,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test8_6()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires8>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type6>());
+			builder.RegisterType<Requires8>().InstancePerMatchingLifetimeScope(Tag.Create<Type6>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Type4, Type5, Type6, Type7, Type8, Requires8>>();
@@ -537,7 +537,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test8_7()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires8>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type7>());
+			builder.RegisterType<Requires8>().InstancePerMatchingLifetimeScope(Tag.Create<Type7>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Type4, Type5, Type6, Type7, Type8, Requires8>>();
@@ -553,7 +553,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		public void Test8_8()
 		{
 			var builder = GetBuilder();
-			builder.RegisterType<Requires8>().InstancePerMatchingLifetimeScope(Tag.GetTag<Type8>());
+			builder.RegisterType<Requires8>().InstancePerMatchingLifetimeScope(Tag.Create<Type8>());
 			using (var container = builder.Build())
 			{
 				var f = container.Resolve<IScopeFactory<Type1, Type2, Type3, Type4, Type5, Type6, Type7, Type8, Requires8>>();
