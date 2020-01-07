@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.29521.150
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dependable.Abstractions", "Dependable.Abstractions\Dependable.Abstractions.csproj", "{4A33A775-BF06-4D53-ADBD-D5811BEA3064}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dependable.Implementations.Autofac", "Dependable.Implementations.Autofac\Dependable.Implementations.Autofac.csproj", "{18F0E79D-A7CD-4275-9DCE-9A9688C944C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dependable.Implementations.Autofac", "Dependable.Implementations.Autofac\Dependable.Implementations.Autofac.csproj", "{18F0E79D-A7CD-4275-9DCE-9A9688C944C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dependable.Implementations.Autofac.Tests", "Dependable.Implementations.Autofac.Tests\Dependable.Implementations.Autofac.Tests.csproj", "{FD1AE8E8-7F79-415D-BFC0-9BEF6A1C7E02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dependable.Implementations.Autofac.Tests", "Dependable.Implementations.Autofac.Tests\Dependable.Implementations.Autofac.Tests.csproj", "{FD1AE8E8-7F79-415D-BFC0-9BEF6A1C7E02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dependable.Implementations.Manual", "Dependable.Implementations.Manual\Dependable.Implementations.Manual.csproj", "{08294566-4339-4E68-A93C-0FD6290C90A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dependable.Implementations.Manual", "Dependable.Implementations.Manual\Dependable.Implementations.Manual.csproj", "{08294566-4339-4E68-A93C-0FD6290C90A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

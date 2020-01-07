@@ -113,10 +113,10 @@ There are at least 3 problems with this code:
 
 Lets start by solving problems 1 and 2.
 
-First we register `Dependable.Implementations.Autofac.Module`:
+First we register `Dependable.Implementations.Autofac.ScopeFactoryModule`:
 
 ```csharp
-builder.RegisterModule<Dependable.Implementations.Autofac.Module>();
+builder.RegisterModule<Dependable.Implementations.Autofac.ScopeFactoryModule>();
 builder.RegisterDecorator<LoggerWithLoggerState, ILogger>();
 builder.RegisterType<RequestIdLoggerState>().As<ILoggerState>().InstancePerLifetimeScope();
 ```
@@ -148,7 +148,7 @@ As for solving the final problem?
 There's more than one way to skin a cat, but this is how I would do it:
 
 ```csharp
-builder.RegisterModule<Dependable.Implementations.Autofac.Module>();
+builder.RegisterModule<Dependable.Implementations.Autofac.ScopeFactoryModule>();
 builder.RegisterDecorator<LoggerWithLoggerState, ILogger>();
 builder.RegisterType<RequestIdLoggerState>().As<ILoggerState>().InstancePerDependency();
 

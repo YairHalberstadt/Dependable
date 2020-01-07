@@ -3,7 +3,7 @@ using Dependable.Abstractions;
 
 namespace Dependable.Implementations.Autofac
 {
-	public class Module : global::Autofac.Module
+	public class ScopeFactoryModule : Module
 	{
 		protected override void Load(ContainerBuilder builder)
 		{

@@ -77,7 +77,7 @@ namespace Dependable.Implementations.Autofac.Tests
 		private ContainerBuilder GetBuilder()
 		{
 			var builder = new ContainerBuilder();
-			builder.RegisterModule<Module>();
+			builder.RegisterModule<ScopeFactoryModule>();
 			builder.RegisterGeneric(typeof(C<>)).AsSelf();
 			return builder;
 		}

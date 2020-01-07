@@ -1,9 +1,9 @@
 ## Usage
 
-Register `Dependable.Implementations.Autofac.Module` with your Autofac container.
+Register `Dependable.Implementations.Autofac.ScopeFactoryModule` with your Autofac container.
 
 ```csharp
-builder.RegisterModule<Dependable.Implementations.Autofac.Module>();
+builder.RegisterModule<Dependable.Implementations.Autofac.ScopeFactoryModule>();
 ```
 
 This module registers implementations of IScopeFactory. They will be automatically injected when you resolve a component which requires an IScopeFactory.
@@ -35,7 +35,7 @@ class D
 }
 ...
 var builder = new ContainerBuilder();
-builder.RegisterModule<Dependable.Implementations.Autofac.Module>()
+builder.RegisterModule<Dependable.Implementations.Autofac.ScopeFactoryModule>()
 builder.RegisterType<C>().InstancePerLifetimeScope();
 builder.RegisterType<D>().InstancePerDependency();
 var container = builder.Build();
