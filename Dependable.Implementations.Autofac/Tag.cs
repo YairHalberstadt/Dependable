@@ -23,13 +23,19 @@ namespace Dependable.Implementations.Autofac
 
 			public Type Type { get; }
 
-			public override bool Equals(Tag other)
+			public override bool Equals(Tag? other)
 			{
 				if (other is SingleTag singleTag)
+				{
 					return singleTag.Type.Equals(Type);
+				}
 				else if (other is CombinedTag combinedTag)
 				{
 					return combinedTag.Types.Contains(Type);
+				}
+				else if (other is null)
+				{
+					return false;
 				}
 				throw new InvalidOperationException("Unreachable");
 			}
@@ -44,10 +50,12 @@ namespace Dependable.Implementations.Autofac
 
 			public HashSet<Type> Types { get; }
 
-			public override bool Equals(Tag other)
+			public override bool Equals(Tag? other)
 			{
 				if (other is SingleTag singleTag)
+				{
 					return Types.Contains(singleTag.Type);
+				}
 				else if (other is CombinedTag combinedTag)
 				{
 					var iterateThis = Types.Count <= combinedTag.Types.Count;
@@ -59,12 +67,16 @@ namespace Dependable.Implementations.Autofac
 					}
 					return false;
 				}
+				else if (other is null)
+				{
+					return false;
+				}
 				throw new InvalidOperationException("Unreachable");
 			}
 		}
-		public abstract bool Equals(Tag other);
+		public abstract bool Equals(Tag? other);
 
-		public override bool Equals(object obj)
+		public override bool Equals(object? obj)
 		{
 			if (obj is Tag tag)
 				return Equals(tag);
